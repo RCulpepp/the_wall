@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"></link>
+		<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id='header' class='row'>
+				<h1 class='eight headerRight'>The Wall</h1>
+				{% if first_name: %}
+					<p class='two'>Welcome, {{ first_name }}</p>
+				{% else: %}
+					<p class='two headerLeft'>Welcome!</p>
+				{% endif %}
+				<p class='two'>
+					{% if id: %}
+					<a href='#'>log off</a></p>
+					{% endif %}
+			</div>
+			<div id='body'>
+			{%  if not login: %}
+				<div id='error'>
+				{% with messages = get_flashed_messages() %}
+					{% for message in messages %}
+						{{ message }}
+					{% endfor %}
+				{% endwith %}
+				</div>
+				<div id='choice' class='welcome'>
+					<h3>Welcome to The Wall!  What would you like to do?</h3>
+					<button id='login-button'>Login</button>
+					<button id='register-button'>Register</button>
+				</div>
+				<div id='login' class='welcome'>
+					<form  action='/login' method='post'>
+						<label for='email'>Email:</label><input type="text" name='email'><br>
+						<label for='password'>Password:</label><input type="text" name='password'>
+						<input type="submit" value='Wall-in!'>
+						<a href='#' class='back'>Aren't a waller? Register>></a>
+					</form>
+				</div>
+				<div id='register' class='welcome'>
+					<form action='/register' method='post'>
+						<label for='first_name'>First Name:</label><input type="text" name='first_name' required><br>
+						<label for='last_name'>Last Name:</label><input type="text" name='last_name' required>
+						<label for='email'>Email:</label><input type="text" name='email' required><br>
+						<label for='password'>Password:</label><input type="text" name='password' required>
+						<label for='confirm-password'>Confirm Password:</label><input type="text" name='confirm-password' required>
+						<input type="submit" value='Become a waller!'>
+						<a href='#' class='back'>Already a waller? Login!>></a>
+					</form>
+				</div>
+			{% endif %}
+			</div>
+		</div>
+	</body>
+</html>

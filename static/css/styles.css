@@ -1,0 +1,171 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+}
+#wrapper{
+	width: 100%;
+	margin: 0 auto;
+	background-color: #f1fffe;
+	font-size: 1em;
+}
+
+#header {
+	height: 10%;
+	color: #f1fffe;
+	background-color: #0c0e42;
+	padding: 5px;
+	border-top: 2px solid #62817e;
+	border-left: 2px solid #62817e;
+	border-radius: 4px;
+}
+#header * {
+	display: inline-block;
+}
+
+a {
+	color:  #62817e;
+	text-decoration: none;
+	font-size: .7em;
+}
+
+a:hover {
+	color: #8da67d;
+	text-decoration: none;
+}
+
+#header p {
+	text-align: center;
+}
+
+.headerLeft{
+	border-left: 3px solid #8da67d;
+	border-right: 3px solid #8da67d;
+	border-bottom-right-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-top-left-radius: 8px;
+	padding: 5px;
+}
+
+#body {
+	width: 100%;
+	float: left;
+	clear: both;
+	background-color: #f1fffe;
+}
+
+.column {
+	float: left;
+}
+
+.eight {
+	width: 75%;
+	padding: 0;
+}
+
+.two {
+	width: 12%;
+	padding: 4px;
+	align-content: right;
+}
+
+h1{
+	font-size: 1.5em;
+}
+
+button, input[type=submit] {
+	background-color: white;
+	border-radius: 5px;
+	border:	1px solid #a4b1af;
+	width: 33%;
+}
+
+input[type=text] {
+	margin-bottom: 5px;
+}
+
+.welcome {
+	width: 30%;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 10px;
+}
+
+.welcome input {
+	width: 100%;
+}
+
+#login, #register {
+	display: none;
+}
+
+#error {
+	width: 100%;
+	color: red;
+	text-align: center;
+}
+
+#dashboard{
+	width: 85%;
+	margin: 10px auto;
+	border-radius: 3px;
+	background-color: transparent;
+}
+
+#wall {
+	border: 3px solid #62817e;
+	width: 70%;
+	float: left;
+	border-radius: 3px;
+	background-color: transparent;
+	margin-right: 1%;
+	min-height: 500px;
+	padding:5px;
+}
+
+#posts {
+	border: 3px solid #62817e;
+	width: 28%;
+	float: left;
+	border-radius: 3px;
+	background-color: transparent;
+	margin-right: 5px;
+	padding: 3px;
+	min-height: 500px;
+}
+
+.sub-block{
+	border: 1px solid #a4b1af;
+	/*width: 100%;*/
+	border-radius: 3px;
+	margin-bottom: 3px;
+	background-color: #a4b1af;
+	margin-top: 5px;
+}
+ .comment{
+ 	margin: 0; 
+ 	background-color: white;
+ 	border-radius: 10px;
+ 	padding-left: 5px;
+ 	margin-left: 10%;
+ }
+
+span {
+	font-size: .8em;
+}
+
+.delete{
+	width: 75px;
+}
+.comm-input {
+	width: auto;
+}
+
+#make-post input {
+	display: block;
+	margin: 5px auto;
+}
+
+#make-post {
+
+}
