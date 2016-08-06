@@ -6,6 +6,9 @@ import hashlib
 import binascii
 import datetime
 
+# key features: sha256 encryption for password with randomly generated salt, full SQL queries written,
+# utilizes session and regex
+
 app = Flask(__name__)
 mysql = MySQLConnector(app, 'the_wall')
 app.secret_key = 'hushhush'
